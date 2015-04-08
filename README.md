@@ -19,9 +19,14 @@ Bower: Bower is needed to distruute the application. In bower.json folder, all t
 - Type npm install in git bash. This will create the node_modules folder.
 - To pull down a package with bower, type "bower install package name". For example, "bower install angularjs".
 - The package(s) will be installed to the bower_components folder.
-- To check the installed packages, type "bower-list".
+- To check the installed packages, type "bower list".
 - Type "bower init" to initialize.
 - To uninstall a package, type "bower uninstall package name".
 
 Grunt
-- Type "npm grunt" in git bash.
+- Type "npm install grunt" in git bash.
+- In order to get started, you need Grunt's command line interface. It will put grunt command in your system path.
+- In Bash, type "npm install -g grunt-cli".
+- CLI loads the local installation of the Grunt library, applies configuration from the GruntFile. 
+- For more information: http://gruntjs.com/getting-started
+- GruntFile.js install grunt plugins and configure-define tasks. 
