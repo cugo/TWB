@@ -11,7 +11,7 @@ Node.js: Java Script for server-side.
 - Node.js command line should be installed. In order to install packages go: https://nodejs.org/
 - Packages should be installed to project folder.
 - Type "npm install -g package name"
-- 
+
 Bower: Bower is needed to distruute the application. In bower.json folder, all the dependencies can be found. Therefore, contribitors do not need to re-install each packages all the time.
 
 - Package manager for the web.
