@@ -1,7 +1,7 @@
 var vectorApp = angular.module("vectorApp", []);
 
 	vectorApp.controller('VectorCtrl',  function($scope, $http){
-		$http.get('data.json').success(function(data){
+		$http.get('resources/json/data.json').success(function(data){
 			$scope.vectorData = data;
 		});
 

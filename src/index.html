@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ="vectorApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge, chrome=1">
+	<title>Vector Table</title>
+	<link rel="stylesheet" href="resources/css/style.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script src="resources/js/TableController.js"></script>
+</head>
+<body ng-controller ="VectorCtrl" class="style">
+<table border ="1" >
+	<tr>
+		<th><input ng-model ="name" type = "text" size="10"></th>
+		<th ng-repeat="i in getNumber(signalData.length) track by $index">[{{$index}}]</th>
+	</tr>
+	<tr ng-repeat = "data in vectorData| filter:name ">
+		<td>{{data.name}}</td>
+		<td ng-repeat = "i in getNumber(signalData.length) track by $index">{{data.data[$index]}}</td>
+	</tr>
+</table>
+</body>
+</html>
