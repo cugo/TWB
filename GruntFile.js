@@ -15,6 +15,15 @@ module.exports = function(grunt){
 				dest: 'bin/<%= pkg.name %>.js' // the name from package.json name.
 			}
 		},
+		deps: { //dependencies
+			src: [
+				'bower_components/modernizr/modernizr.js',
+				'bower_components/bootstrap/dist/js/bootstrap.js',
+				'bower_components/jquery/dist/jquery.js',
+				'bower_components/angularjs/angularjs.min.js',
+			],
+			dest: 'src/resources/js/<%= pkg.name %>-deps.js'
+		},
 		uglify: {
 			options: {
 				mangle: false
@@ -27,11 +36,11 @@ module.exports = function(grunt){
 			}
 		}
 	});
-
+	//npm tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	//Tasks
-	grunt.registerTask('default', ['concat']); // runs from cmd. just type grunt.
+	grunt.registerTask('default', 'Default Task Alias'['concat']); // runs from cmd. just type grunt.
 	grunt.registerTask('conugly', ['concat', 'uglify']); // grunt conugly
 }; 
