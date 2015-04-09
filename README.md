@@ -1,10 +1,12 @@
 TWB
 
 To set up the app:
-- To create the web application there are a few external libraries which are necessary.
-- Download Git Bash. Download repository via clone URL by typing git clone "url".
-- In Git Bash, go to project folder and type "npm install" to install the dependencies. It will look the dependendies in the package.json file.
+- To create the web application, there are a few external libraries which are necessary.
+- Download Git Bash. Then download repository via clone URL by typing git clone "url".
+- In Git Bash, go to project folder in your machine and type "npm install" to install the dependencies. It will look the dependendies in the package.json file.
 - Type "bower install". The bower_components folder will be created with the dependent packages written in bower.json.
+
+Information about tools (no need for pulling dependencies or etc)
 
 Node.js: Java Script for server-side.
 - npm install packages (grunt, bower etc)
