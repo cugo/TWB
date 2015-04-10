@@ -4,11 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge, chrome=1">
 	<title>Vector Table</title>
-	<link rel="stylesheet" href="resources/css/style.css" />
+	<link rel="stylesheet" href="resources/css/TWB.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-	<script src="resources/js/TableController.js"></script>
+	<script src="TWB-deps.js"></script>
+	<script src="TWB.js"></script>
+
 </head>
-<body ng-controller ="VectorCtrl" class="style">
+<body>
+<div ng-controller ="VectorCtrl" class="style">
 <table border ="1" >
 	<tr>
 		<th><input ng-model ="name" type = "text" size="10"></th>
@@ -19,5 +22,7 @@
 		<td ng-repeat = "i in getNumber(signalData.length) track by $index">{{data.data[$index]}}</td>
 	</tr>
 </table>
+</div>
+<button class="btn btn-default">Run</button>
 </body>
 </html>
