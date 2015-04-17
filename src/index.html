@@ -1,28 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" ng-app ="vectorApp">
+<html lang="en" data-ng-app ="vectorApp">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vector Table</title>
 	<link rel="stylesheet" href="resources/css/TWB.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 	<script src="TWB-deps.js"></script>
 	<script src="TWB.js"></script>
-
 </head>
+
 <body>
-<div ng-controller ="VectorCtrl" class="style">
-<table border ="1" >
-	<tr>
-		<th><input ng-model ="name" type = "text" size="10"></th>
-		<th ng-repeat="i in getNumber(signalData.length) track by $index">[{{$index}}]</th>
-	</tr>
-	<tr ng-repeat = "data in vectorData| filter:name ">
-		<td>{{data.name}}</td>
-		<td ng-repeat = "i in getNumber(signalData.length) track by $index">{{data.data[$index]}}</td>
-	</tr>
-</table>
+<div id = "wrapper">
+
+	<nav>
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"> <a href= "#" title="Home">Home</a> </li>
+			<li> <a href= "#" title="About">About TWB</a> </li>
+			<li> <a href= "#" title="Contact">Help</a> </li>
+			<a href="#"><img id = "tesedaImg" src="resources/img/teseda_logo.jpg" class="img-circle" alt="Cinque Terre" width="70" height="50" align="right"></a>
+		</ul>
+	</nav>
+
+<div class="container-fluid">
+<div class=	"row">
+	<div id="treeContainer" class="col-sm-4">
+		<aside  class="well">
+			<dl>
+				<dt><b>Device Data</b></dt>
+				<dt><b>Pin Maps</b></dt>
+				<dt><b>Patterns</b></dt>
+				<dt><b>Project Reports</b></dt>
+			</dl>
+		</aside>
+	</div>
+
+
+	<div id="buttonContainer" class="col-sm-8" >
+		<form class="form-group-up">
+			<div class="form-group">
+				<button class="btn btn-default navbar-btn">First</button>
+				<label>Cycle:</label>
+				<input type="number" name="cycle" data-ng-model="cycleVal"=min="0" max="100"></span>
+				<button class="btn btn-default navbar-btn">Go to</button>
+				<button class="btn btn-default navbar-btn">Last</button>
+				<label>(Test Pattern: {{cycleVal}})</label>
+				<br>
+				<button class="btn btn-default navbar-btn">[ &larr;</button>
+				<button class="btn btn-default navbar-btn">] &larr;</button>
+				<button class="btn btn-default navbar-btn">&rarr; [</button>
+				<button class="btn btn-default navbar-btn">&rarr; ]</button>
+			</div>		
+		</form>
+	</div>
+
+	<div data-ng-controller ="VectorCtrl" id="tableContainer" class="col-sm-8" class="well">
+		<table class="table table-condensed" >
+			<thead>
+			<tr>
+				<th><input data-ng-model ="name" type = "text" size="10"></th>
+				<th data-ng-repeat="i in getNumber(signalData.length) track by $index">[{{$index}}]</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr data-ng-repeat = "data in vectorData| filter:name ">
+				<td>{{data.name}}</td>
+				<td data-ng-repeat = "i in getNumber(signalData.length) track by $index">{{data.data[$index]}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
 </div>
-<button class="btn btn-default">Run</button>
+</div>
+
+	
+
+<footer id="footer">
+	<h6>2007 - 2015 &copy; Teseda Corporation - info@teseda.com</h6>
+</footer>
+
+
+</div>
+
 </body>
 </html>
