@@ -2,7 +2,7 @@ TWB
 
 To set up the app:
 - To create the web application, there are a few external libraries which are necessary.
-- Download Git Bash. Then download repository via clone URL by typing 'git clone "url"'.
+- Download Git Bash (http://git-scm.com/downloads). Open the Git Bash then download repository via clone URL by typing 'git clone "url"'. The URL is provided on right hand side of this window.
 - In Git Bash, go to project folder in your machine and type "npm install" to install the dependencies. It will look the dependendies in the package.json file.
 - Type "bower install". The bower_components folder will be created with the dependent packages written in bower.json.
 - To see the app in Chrome, install http-server by typing npm install http-server -g in command line. Then go to Chrome and type http://localhost:8080/src
