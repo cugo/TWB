@@ -3,7 +3,7 @@ TWB
 To set up the app:
 - To create the web application, there are a few external libraries which are necessary.
 - Download Git Bash (http://git-scm.com/downloads). Open the Git Bash then download repository to the specified folder in your local machine via clone URL by typing 'git clone "url"'. The URL is provided on right hand side of this window. 
-- In Git Bash, go to project, type "cd TWB". You will be on master mode. Then type "npm install" to install the dependencies. It will look the dependendies in the package.json file. You should now see node_modules folder under TWB. In node_module folder, you will see the devDependencies that are written in package.json. 
+- In Git Bash, go to project, type "cd TWB". You will be on master mode. Type "npm install -g bower" and type "npm install grunt" to install bower and grunt. Bower will help pulling dependencies that are written in bower.json. Then type "npm install" to install the dependencies. It will look the dependendies in the package.json file. You should now see node_modules folder under TWB. In node_module folder, you will see the devDependencies that are written in package.json. 
 - Later, type "bower install". The bower_components folder will be created with the dependent packages written in bower.json.
 - To see the app in Chrome, install http-server by typing "npm install http-server -g" in bash. Then go to Chrome and type http://localhost:8080/src
 
