@@ -16,7 +16,7 @@ Node.js: Java Script for server-side.
 - Type "npm install -g package name"
 
 Bower: Bower is needed to distrubute the application. In bower.json folder, all the dependencies can be found. Therefore, contribitors do not need to re-install each packages all the time.
-Bower:
+Bower: http://bower.io/
 - Package manager for the web.
 - Pulls down the necessary libraries
 - Type npm install in git bash. This will create the node_modules folder.
